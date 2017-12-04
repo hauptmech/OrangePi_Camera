@@ -250,7 +250,7 @@ int write_JPEG_file(const char *filename, unsigned char*yuvData,
     cinfo.image_width = image_width;  
     cinfo.image_height = image_height;
     cinfo.input_components = 3;   
-    cinfo.in_color_space = JCS_RGB;  
+    cinfo.in_color_space = JCS_YCbCr;  
 
     jpeg_set_defaults(&cinfo);
     jpeg_set_quality(&cinfo, quality, TRUE );
